@@ -1,6 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --white:rgb(255, 255, 255);
+  --black:#000;
+  --red:rgb(241, 44, 44);
+  --gold:gold;
+  --libgdark:rgba(187, 183, 182, 0.979);
+  --buttonbgdark:rgba(255, 255, 255, 0.795);
+  --buttondarkshadow:#8d8b8b;
+  --articleheaddark:rgba(238, 148, 148, 0.863);
+  --articlepdark:rgba(255, 255, 255, 0.74);
+  --buttonbglight:rgba(167, 167, 167, 0.795);
+  --buttonlightshadow:#222222;
+  --articleheadlight:rgba(56, 19, 53, 0.863);
+  --articleplight:rgba(26, 26, 26, 0.74);
+}
+
+.dark {
+  --themebg:var(--black);
+  --libg:var(--red);
+  --btnbg:var(--buttonbgdark);
+  --btnshadow:var(--buttondarkshadow);
+  --articleheader:var(--articleheaddark);
+  --articletext:var(--articlepdark);
+}
+
+.light {
+  --themebg:var(--white);
+  --libg:var(--gold);
+  --btnbg:var(--buttonbglight);
+  --btnshadow:var(--buttonlightshadow);
+  --articleheader:var(--articleheadlight);
+  --articletext:var(--articleplight);
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -208,7 +242,12 @@ a {
   flex-wrap: wrap;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   text-transform: capitalize;
   text-align: center;
@@ -219,14 +258,27 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   bottom: 0;
   display: block;
+  z-index: 100;
 }
 
 #moon {
   position: fixed;
   width: 40px;
   top: 3rem;
-  right: 4rem;
+  right: 2rem;
   display: block;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#sun {
+  position: fixed;
+  width: 80px;
+  right: 1.3rem;
+  top: 1.6rem;
+  display: none;
+  cursor: pointer;
+  z-index: 100;
 }
 
 #meteor1 {
@@ -253,124 +305,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   transform: rotate(10deg);
-}
-
-.header .fa {
-  margin-bottom: 3rem;
-  font-size: 5rem;
-  background-image: linear-gradient(100deg, #26f39e, #c04324);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  -webkit-animation: hue 4s infinite ease-in-out;
-          animation: hue 4s infinite ease-in-out;
-}
-.header .fa:hover {
-  color: red;
-  -webkit-animation: none;
-          animation: none;
-}
-
-#root {
-  background-color: black;
-}
-
-.nav-bar {
-  position: fixed;
-  width: 15rem;
-  padding: 2rem 1rem;
-  left: 0;
-  opacity: 0.9;
-  justify-content: flex-start;
-  top: 0;
-  z-index: 100;
-  height: 100vh;
-  background-color: rgba(36, 35, 35, 0.541);
-}
-.nav-bar ul {
-  width: 100%;
-  height: 40vh;
-  justify-content: center;
-}
-.nav-bar ul .selected {
-  background-color: #f12c2c;
-  width: 130%;
-}
-.nav-bar ul li {
-  margin-bottom: 3rem;
-  width: 120%;
-  text-align: center;
-  background-color: rgba(187, 183, 182, 0.979);
-}
-.nav-bar ul li:hover {
-  background-color: #f12c2c;
-  width: 130%;
-}
-.nav-bar ul li a {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.container {
-  max-width: 75%;
-  margin-left: 18rem;
-}
-
-.main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-}
-.main h1 {
-  font-size: 6rem;
-  font-weight: 900;
-  color: indianred;
-  background-image: linear-gradient(100deg, #26f39e, #c04324);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  -webkit-animation: hue 2s infinite linear;
-          animation: hue 2s infinite linear;
-}
-@-webkit-keyframes hue {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(-360deg);
-  }
-}
-@keyframes hue {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(-360deg);
-  }
-}
-
-.awesome-button {
-  z-index: 0;
-  border: 0;
-  background: rgba(255, 255, 255, 0.795);
-  border-radius: 4px;
-  box-shadow: 0 5px 0 #8d8b8b;
-  color: black;
-  cursor: pointer;
-  font: inherit;
-  margin-top: 4rem;
-  font-weight: bold;
-  outline: 0;
-  font-size: 1.2rem;
-  padding: 0.5rem 2rem;
-  transition: all 0.1s linear;
-}
-.awesome-button:active {
-  box-shadow: 0 2px 0 #7f8283;
-  transform: translateY(3px);
 }
 
 @-webkit-keyframes shower {
@@ -429,4 +363,193 @@ h1, h2, h3, h4, h5, h6 {
     right: 70rem;
     top: 40rem;
   }
+}
+.header .fa {
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  background-image: linear-gradient(100deg, #26f39e, #c04324);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  -webkit-animation: hue 4s infinite ease-in-out;
+          animation: hue 4s infinite ease-in-out;
+}
+.header .fa:hover {
+  color: red;
+  -webkit-animation: none;
+          animation: none;
+}
+
+#root {
+  background-color: var(--themebg);
+}
+
+.nav-bar {
+  position: fixed;
+  width: 15rem;
+  padding: 2rem 1rem;
+  left: 0;
+  opacity: 0.9;
+  justify-content: flex-start;
+  top: 0;
+  z-index: 100;
+  height: 100vh;
+  background-color: rgba(36, 35, 35, 0.541);
+}
+.nav-bar ul {
+  width: 100%;
+  height: 40vh;
+  justify-content: center;
+}
+.nav-bar ul .selected {
+  background-color: var(--libg);
+  width: 130%;
+}
+.nav-bar ul li {
+  margin-bottom: 3rem;
+  width: 120%;
+  text-align: center;
+  background-color: rgba(187, 183, 182, 0.979);
+}
+.nav-bar ul li:hover {
+  background-color: var(--libg);
+  width: 130%;
+}
+.nav-bar ul li a {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+* {
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.container {
+  max-width: 75%;
+  margin-left: 18rem;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+.main h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  color: indianred;
+  background-image: linear-gradient(100deg, #26f39e, #c04324);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  -webkit-animation: hue 2s infinite linear;
+          animation: hue 2s infinite linear;
+}
+@-webkit-keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+.awesome-button {
+  z-index: 101;
+  border: 0;
+  background: var(--btnbg);
+  border-radius: 4px;
+  box-shadow: 0 5px 0 var(--btnshadow);
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  margin-top: 1rem;
+  font-weight: bold;
+  outline: 0;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  transition: all 0.1s linear;
+}
+.awesome-button:active {
+  box-shadow: 0 2px 0 var(--btnshadow);
+  transform: translateY(3px);
+}
+
+.transforms {
+  min-height: 350vh;
+  display: block;
+}
+
+.article {
+  padding: 2rem 0;
+  text-align: left;
+}
+.article h2 {
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  color: var(--articleheader);
+}
+.article p {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  margin: 1rem 0;
+  color: var(--articletext);
+}
+.article .code {
+  padding: 2rem 0;
+  border-radius: 10px;
+  background-color: rgba(173, 216, 230, 0.774);
+}
+.article .code span {
+  color: black;
+  word-spacing: 2px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 0.5rem 2rem;
+  margin-right: 0;
+  font-size: 1.2rem;
+}
+.article .code span code {
+  color: #2c59eb;
+}
+.article .important {
+  color: rgba(0, 217, 255, 0.788);
+  font-weight: bold;
+}
+.article .demo-box {
+  display: grid;
+  height: 300px;
+  background-color: rgba(173, 216, 230, 0.774);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.article .demo-box .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.article .demo-box .box span {
+  font-weight: 900;
+  font-size: 5rem;
+  color: black;
 }/*# sourceMappingURL=styles.css.map */
