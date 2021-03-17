@@ -15,17 +15,10 @@ if (localStorage.getItem("theme") === "light") {
     sun.style.display = "block";
     peak1.style.fill = "rgb(146, 201, 44)";
     peak2.style.fill = "darkgreen";
+    
 
 }
-else{
-    document.body.classList.toggle('light');
-    moon.style.display = "block";
-    sun.style.display = "none";
-    peak1.style.fill = "indianred";
-    peak2.style.fill = "brown";
-   
-    console.log(localStorage.getItem("theme"));
-}
+
 
 
 moon.addEventListener('click', () => {
