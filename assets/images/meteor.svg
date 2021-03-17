@@ -1,0 +1,46 @@
+	<svg
+				id="meteor"
+				data-name="Layer 1"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				width="754"
+				height="750.35999"
+				viewBox="0 0 754 750.35999"
+			>
+				<defs>
+					<linearGradient
+						id="b13d5aa8-7d59-4aa5-8b0c-a1087af90b05"
+						x1="632.9307"
+						y1="457.00246"
+						x2="719.74066"
+						y2="457.00246"
+						gradientUnits="userSpaceOnUse"
+					>
+						<stop offset="0" stop-color="#fff" />
+						<stop offset="1" stop-color="#fff" stop-opacity="0.3" />
+					</linearGradient>
+					<linearGradient
+						id="b216fe78-eea0-4fe3-b1f5-9d415c27bb0d"
+						x1="578.9307"
+						y1="243.00246"
+						x2="665.74066"
+						y2="243.00246"
+						xlink:href="#b13d5aa8-7d59-4aa5-8b0c-a1087af90b05"
+					/>
+				</defs>
+				
+				<path
+					d="M634.85347,507.4362,667.824,468.83765l32.97058-38.59855L719.407,408.4496c1.02981-1.2056-.55938-3.08643-1.58915-1.88088l-32.97058,38.59855-32.97057,38.59855-18.61242,21.78951c-1.02981,1.2056.55938,3.08642,1.58915,1.88087Z"
+					transform="translate(-223 -74.82001)"
+					opacity="0.8"
+					fill="url(#b13d5aa8-7d59-4aa5-8b0c-a1087af90b05)"
+				/>
+			<path
+					d="M580.85347,293.4362,613.824,254.83765l32.97058-38.59855L665.407,194.4496c1.02981-1.2056-.55938-3.08643-1.58915-1.88088l-32.97058,38.59855-32.97057,38.59855-18.61242,21.78951c-1.02981,1.2056.55938,3.08642,1.58915,1.88087Z"
+					transform="translate(-223 -74.82001)"
+					opacity="0.8"
+					fill="url(#b216fe78-eea0-4fe3-b1f5-9d415c27bb0d)"
+				/>
+			
+
+			</svg>

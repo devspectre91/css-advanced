@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+body {
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.container {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-c {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-20 {
+    flex: 0 1 20%;
+}
+.flex-23 {
+    flex: 0 1 23%;
+}
+.flex-30 {
+    flex: 0 1 30%;
+}
+.flex-32 {
+    flex: 0 1 32%;
+}
+.flex-48 {
+    flex: 0 1 48%;
+}
+.flex-50 {
+    flex: 0 1 50%;
+}
+.flex-65 {
+    flex: 0 1 65%;
+}
+.flex-70 {
+    flex: 0 1 80%;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    color:black
+
+}
+
+
+
