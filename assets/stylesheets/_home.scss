@@ -29,7 +29,7 @@
 
 	animation: shower 4s infinite linear;
 	right: 40rem;
-	top: -15rem;
+	top: -20rem;
 	transform: rotate(10deg);
 	animation-delay: 3s;
 }
@@ -38,7 +38,7 @@
 	position: fixed;
 	z-index: -10;
 	right: 10rem;
-	top: -15rem;
+	top: -20rem;
 	animation: shower-left 4s infinite linear;
 	animation-delay: 1s;
 	transform: rotate(10deg);
@@ -46,7 +46,7 @@
 @keyframes shower {
 	0% {
 		right: 40rem;
-		top: -5rem;
+		top: -15rem;
 	}
 
 	20% {
@@ -62,7 +62,7 @@
 @keyframes shower-left {
 	0% {
 		right: 10rem;
-		top: -5rem;
+		top: -15rem;
 	}
 
 	20% {

@@ -292,7 +292,7 @@ h6 {
   -webkit-animation: shower 4s infinite linear;
           animation: shower 4s infinite linear;
   right: 40rem;
-  top: -15rem;
+  top: -20rem;
   transform: rotate(10deg);
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
@@ -303,7 +303,7 @@ h6 {
   position: fixed;
   z-index: -10;
   right: 10rem;
-  top: -15rem;
+  top: -20rem;
   -webkit-animation: shower-left 4s infinite linear;
           animation: shower-left 4s infinite linear;
   -webkit-animation-delay: 1s;
@@ -314,7 +314,7 @@ h6 {
 @-webkit-keyframes shower {
   0% {
     right: 40rem;
-    top: -5rem;
+    top: -15rem;
   }
   20% {
     right: 90rem;
@@ -329,7 +329,7 @@ h6 {
 @keyframes shower {
   0% {
     right: 40rem;
-    top: -5rem;
+    top: -15rem;
   }
   20% {
     right: 90rem;
@@ -343,7 +343,7 @@ h6 {
 @-webkit-keyframes shower-left {
   0% {
     right: 10rem;
-    top: -5rem;
+    top: -15rem;
   }
   20% {
     right: 70rem;
@@ -357,7 +357,7 @@ h6 {
 @keyframes shower-left {
   0% {
     right: 10rem;
-    top: -5rem;
+    top: -15rem;
   }
   20% {
     right: 70rem;
