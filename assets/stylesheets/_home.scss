@@ -75,7 +75,7 @@
 	}
 }
 .header {
-	.fa {
+	.fa-css3 {
 		margin-bottom: 3rem;
 		font-size: 5rem;
 		color: var(--themeicon);
@@ -85,9 +85,20 @@
 			color: red;
 		}
 	}
+	.fa-bars {
+		color: var(--themeicon);
+		position: fixed;
+		left: 1rem;
+		display: none;
+		top: 1rem;
+		z-index: 120;
+	}
 }
 #root {
 	background-color: var(--themebg);
+}
+#check-item {
+	display: none;
 }
 .nav-bar {
 	position: fixed;

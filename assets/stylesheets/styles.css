@@ -372,18 +372,30 @@ h6 {
     top: 40em;
   }
 }
-.header .fa {
+.header .fa-css3 {
   margin-bottom: 3rem;
   font-size: 5rem;
   color: var(--themeicon);
   filter: drop-shadow(2px 2px 1px #f09c9c);
 }
-.header .fa:hover {
+.header .fa-css3:hover {
   color: red;
+}
+.header .fa-bars {
+  color: var(--themeicon);
+  position: fixed;
+  left: 1rem;
+  display: none;
+  top: 1rem;
+  z-index: 120;
 }
 
 #root {
   background-color: var(--themebg);
+}
+
+#check-item {
+  display: none;
 }
 
 .nav-bar {
@@ -570,11 +582,41 @@ h6 {
     font-size: 10px;
   }
 
+  #check-item {
+    display: none;
+  }
+  #check-item:checked ~ .nav-bar {
+    display: block;
+  }
+
+  .header .fa-bars {
+    display: block;
+  }
   .header .meteors {
     font-size: 12px;
   }
   .header .nav-bar {
+    transition: background-color 0.8s ease, color 0.8s ease;
+    top: 0;
+    width: 100%;
+    flex-direction: row;
     display: none;
+    background-color: var(--black);
+  }
+  .header .nav-bar ul {
+    margin-top: 6rem;
+  }
+  .header .nav-bar ul li {
+    background-color: unset;
+  }
+  .header .nav-bar ul li a {
+    color: var(--white);
+  }
+  .header .fa-css3 {
+    display: block;
+    width: 20%;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .container {
@@ -601,10 +643,6 @@ h6 {
 
   .header .meteors {
     font-size: 12px;
-  }
-
-  .nav-bar {
-    display: none;
   }
 
   .container {

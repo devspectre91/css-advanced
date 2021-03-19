@@ -10,12 +10,42 @@
 	html {
 		font-size: 10px;
 	}
+	#check-item {
+		display: none;
+		&:checked ~ .nav-bar {
+			display: block;
+		}
+	}
+
 	.header {
+		.fa-bars {
+			display: block;
+		}
 		.meteors {
 			font-size: 12px;
 		}
 		.nav-bar {
+			transition: background-color 0.8s ease, color 0.8s ease;
+			top: 0;
+			width: 100%;
+			flex-direction: row;
 			display: none;
+			background-color: var(--black);
+			ul {
+				margin-top: 6rem;
+				li {
+					background-color: unset;
+					a {
+						color: var(--white);
+					}
+				}
+			}
+		}
+		.fa-css3 {
+			display: block;
+			width: 20%;
+			text-align: center;
+			margin: 0 auto;
 		}
 	}
 	.container {
@@ -40,9 +70,7 @@
 	.header .meteors {
 		font-size: 12px;
 	}
-	.nav-bar {
-		display: none;
-	}
+
 	.container {
 		max-width: 78%;
 	}
