@@ -601,7 +601,8 @@ h6 {
     width: 100%;
     flex-direction: row;
     display: none;
-    background-color: var(--black);
+    background-color: black;
+    opacity: 1;
   }
   .header .nav-bar ul {
     margin-top: 6rem;
@@ -617,6 +618,7 @@ h6 {
     width: 20%;
     text-align: center;
     margin: 0 auto;
+    color: crimson;
   }
 
   .container {
