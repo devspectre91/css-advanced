@@ -29,9 +29,13 @@
    --btnshadow:var(--buttondarkshadow);
    --articleheader:var(--articleheaddark);
    --articletext:var(--articlepdark);
+   --themeicon:var(--white);
+   --themeiconshadow:(--white);
   }
   .light{
     --themebg:var(--white);
+    --themeicon:var(--black)
+    --themeiconshadow:(--white);
    --libg:var(--gold);
    --btnbg:var(--buttonbglight);
    --btnshadow:var(--buttonlightshadow);

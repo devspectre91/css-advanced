@@ -24,10 +24,14 @@
   --btnshadow:var(--buttondarkshadow);
   --articleheader:var(--articleheaddark);
   --articletext:var(--articlepdark);
+  --themeicon:var(--white);
+  --themeiconshadow:(--white);
 }
 
 .light {
   --themebg:var(--white);
+  --themeicon:var(--black)
+  --themeiconshadow:(--white);
   --libg:var(--gold);
   --btnbg:var(--buttonbglight);
   --btnshadow:var(--buttonlightshadow);
@@ -291,8 +295,8 @@ h6 {
   z-index: -10;
   -webkit-animation: shower 4s infinite linear;
           animation: shower 4s infinite linear;
-  right: 40rem;
-  top: -20rem;
+  right: 40em;
+  top: -20em;
   transform: rotate(10deg);
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
@@ -302,8 +306,8 @@ h6 {
   width: 500px;
   position: fixed;
   z-index: -10;
-  right: 10rem;
-  top: -20rem;
+  right: 10em;
+  top: -20em;
   -webkit-animation: shower-left 4s infinite linear;
           animation: shower-left 4s infinite linear;
   -webkit-animation-delay: 1s;
@@ -313,75 +317,69 @@ h6 {
 
 @-webkit-keyframes shower {
   0% {
-    right: 40rem;
-    top: -15rem;
+    right: 40em;
+    top: -15em;
   }
   20% {
-    right: 90rem;
-    top: 40rem;
+    right: 90em;
+    top: 40em;
   }
   100% {
-    right: 90rem;
-    top: 40rem;
+    right: 90em;
+    top: 40em;
   }
 }
 
 @keyframes shower {
   0% {
-    right: 40rem;
-    top: -15rem;
+    right: 40em;
+    top: -15em;
   }
   20% {
-    right: 90rem;
-    top: 40rem;
+    right: 90em;
+    top: 40em;
   }
   100% {
-    right: 90rem;
-    top: 40rem;
+    right: 90em;
+    top: 40em;
   }
 }
 @-webkit-keyframes shower-left {
   0% {
-    right: 10rem;
-    top: -15rem;
+    right: 10em;
+    top: -15em;
   }
   20% {
-    right: 70rem;
-    top: 40rem;
+    right: 70em;
+    top: 40em;
   }
   100% {
-    right: 70rem;
-    top: 40rem;
+    right: 70em;
+    top: 40em;
   }
 }
 @keyframes shower-left {
   0% {
-    right: 10rem;
-    top: -15rem;
+    right: 10em;
+    top: -15em;
   }
   20% {
-    right: 70rem;
-    top: 40rem;
+    right: 70em;
+    top: 40em;
   }
   100% {
-    right: 70rem;
-    top: 40rem;
+    right: 70em;
+    top: 40em;
   }
 }
 .header .fa {
   margin-bottom: 3rem;
   font-size: 5rem;
-  background-image: linear-gradient(100deg, #26f39e, #c04324);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  -webkit-animation: hue 4s infinite ease-in-out;
-          animation: hue 4s infinite ease-in-out;
+  color: var(--themeicon);
+  filter: drop-shadow(2px 2px 1px #f09c9c);
 }
 .header .fa:hover {
   color: red;
-  -webkit-animation: none;
-          animation: none;
 }
 
 #root {
@@ -420,6 +418,8 @@ h6 {
   width: 130%;
 }
 .nav-bar ul li a {
+  width: 100%;
+  display: inline-block;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -439,11 +439,11 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh;
 }
 .main h1 {
   font-size: 6rem;
   font-weight: 900;
+  padding-top: 7rem;
   color: indianred;
   background-image: linear-gradient(100deg, #26f39e, #c04324);
   -webkit-background-clip: text;
@@ -488,11 +488,6 @@ h6 {
 .awesome-button:active {
   box-shadow: 0 2px 0 var(--btnshadow);
   transform: translateY(3px);
-}
-
-.transforms {
-  min-height: 350vh;
-  display: block;
 }
 
 .article {
@@ -540,10 +535,9 @@ h6 {
 }
 .article .demo-box {
   display: grid;
-  height: 300px;
   background-color: rgba(173, 216, 230, 0.774);
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 0.5rem;
+  padding: 3rem 0.5rem;
   border-radius: 10px;
 }
 .article .demo-box .box {
@@ -556,4 +550,76 @@ h6 {
   font-weight: 900;
   font-size: 5rem;
   color: black;
+}
+
+.transforms {
+  margin-bottom: 10rem;
+}
+
+@media only screen and (max-width: 1160px) {
+  html {
+    font-size: 8px;
+  }
+
+  .header .meteors {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 830px) {
+  html {
+    font-size: 10px;
+  }
+
+  .header .meteors {
+    font-size: 12px;
+  }
+  .header .nav-bar {
+    display: none;
+  }
+
+  .container {
+    max-width: 78%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  #moon {
+    top: 1.5rem;
+    right: 1.2rem;
+    width: 30px;
+  }
+
+  #sun {
+    width: 60px;
+    top: 0.2rem;
+    right: 0.3rem;
+  }
+
+  .header .meteors {
+    font-size: 12px;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .container {
+    max-width: 78%;
+  }
+
+  .article .demo-box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main h1 {
+    font-size: 4rem;
+  }
+
+  .transforms {
+    margin-bottom: 10rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

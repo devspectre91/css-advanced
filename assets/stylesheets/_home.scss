@@ -28,8 +28,8 @@
 	z-index: -10;
 
 	animation: shower 4s infinite linear;
-	right: 40rem;
-	top: -20rem;
+	right: 40em;
+	top: -20em;
 	transform: rotate(10deg);
 	animation-delay: 3s;
 }
@@ -37,54 +37,52 @@
 	width: 500px;
 	position: fixed;
 	z-index: -10;
-	right: 10rem;
-	top: -20rem;
+	right: 10em;
+	top: -20em;
 	animation: shower-left 4s infinite linear;
 	animation-delay: 1s;
 	transform: rotate(10deg);
 }
 @keyframes shower {
 	0% {
-		right: 40rem;
-		top: -15rem;
+		right: 40em;
+		top: -15em;
 	}
 
 	20% {
-		right: 90rem;
-		top: 40rem;
+		right: 90em;
+		top: 40em;
 	}
 	100% {
-		right: 90rem;
-		top: 40rem;
+		right: 90em;
+		top: 40em;
 	}
 }
 
 @keyframes shower-left {
 	0% {
-		right: 10rem;
-		top: -15rem;
+		right: 10em;
+		top: -15em;
 	}
 
 	20% {
-		right: 70rem;
-		top: 40rem;
+		right: 70em;
+		top: 40em;
 	}
 	100% {
-		right: 70rem;
-		top: 40rem;
+		right: 70em;
+		top: 40em;
 	}
 }
 .header {
 	.fa {
 		margin-bottom: 3rem;
 		font-size: 5rem;
-		background-image: linear-gradient(100deg, #26f39e, #c04324);
-		background-clip: text;
-		color: transparent;
-		animation: hue 4s infinite ease-in-out;
+		color: var(--themeicon);
+		filter: drop-shadow(2px 2px 1px rgb(240, 156, 156));
+
 		&:hover {
 			color: red;
-			animation: none;
 		}
 	}
 }
@@ -122,6 +120,8 @@
 			}
 
 			a {
+				width: 100%;
+				display: inline-block;
 				font-size: 2rem;
 				font-weight: bold;
 			}
@@ -142,11 +142,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 60vh;
+
 	h1 {
 		font-size: 6rem;
 		font-weight: 900;
-
+		padding-top: 7rem;
 		color: indianred;
 
 		background-image: linear-gradient(100deg, #26f39e, #c04324);
@@ -186,10 +186,6 @@
 	}
 }
 
-.transforms {
-	min-height: 350vh;
-	display: block;
-}
 .article {
 	padding: 2rem 0;
 	text-align: left;
@@ -235,10 +231,10 @@
 	}
 	.demo-box {
 		display: grid;
-		height: 300px;
+
 		background-color: rgba(173, 216, 230, 0.774);
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		padding: 0.5rem;
+		padding: 3rem 0.5rem;
 		border-radius: 10px;
 		.box {
 			display: flex;
@@ -253,4 +249,8 @@
 			}
 		}
 	}
+}
+
+.transforms {
+	margin-bottom: 10rem;
 }
